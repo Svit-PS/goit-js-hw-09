@@ -57,7 +57,7 @@ function onSubmitForm(event) {
   const step = Number(strStep.value);
   const amount = Number(strAmount.value);
 
-  for (i = 0; i < amount; i++) {
+  for (let i = 0; i < amount; i++) {
     createPromise(i + 1, delay + i * step)
       .then(({ position, delay }) => {
         Notiflix.Notify.init({
