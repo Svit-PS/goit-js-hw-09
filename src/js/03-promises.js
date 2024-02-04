@@ -63,7 +63,8 @@ function onSubmitForm(event) {
         Notiflix.Notify.init({
           useIcon: false,
           info: {
-            background: 'green',
+            textColor: '#212121',
+            background: 'chartreuse',
           },
         });
         Notiflix.Notify.info(`✅ Fulfilled promise ${position} in ${delay}ms`);
@@ -73,7 +74,8 @@ function onSubmitForm(event) {
         Notiflix.Notify.init({
           useIcon: false,
           info: {
-            background: 'red',
+            textColor: '#fff',
+            background: 'firebrick',
           },
         });
         Notiflix.Notify.info(`❌ Rejected promise ${position} in ${delay}ms`);
