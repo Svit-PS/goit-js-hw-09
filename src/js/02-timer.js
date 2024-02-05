@@ -86,10 +86,12 @@ fp = flatpickr('#datetime-picker', options);
 let idTimer = null;
 
 function onClickStart() {
+  btnStart.setAttribute('disabled', '');
   idTimer = setInterval(() => {
     const deltaDate = futureDate - Date.now();
     if (deltaDate < 1000) {
       clearInterval(idTimer);
+      // btnStart.removeAttribute('disabled');
     }
     const objTimer = convertMs(deltaDate);
     upDateTimer(objTimer);
